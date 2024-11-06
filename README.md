@@ -1,6 +1,6 @@
-# ghs
+# GESTÃO HOTELEIRA SIMPLIFICADA
 
-An Electron application with React
+Aplicação Desktop feita com Electron + React
 
 ## Recommended IDE Setup
 
