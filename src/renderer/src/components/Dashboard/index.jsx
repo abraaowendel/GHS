@@ -1,51 +1,49 @@
-import * as C from "./styled";
+import * as C from './styled'
 
-import {
-  FaBed,
-  FaRegCalendarAlt,
-  FaRegCreditCard,
-  FaGripHorizontal 
-} from 'react-icons/fa'
-import { IoSettings } from "react-icons/io5";
-import { IoMdPerson, IoMdExit } from "react-icons/io";
-import { FaUserLock } from "react-icons/fa6";
+import { FaBed, FaRegCalendarAlt, FaRegCreditCard, FaGripHorizontal } from 'react-icons/fa'
+import { IoSettings } from 'react-icons/io5'
+import { IoMdPerson, IoMdExit } from 'react-icons/io'
+import { FaUserLock } from 'react-icons/fa6'
+import Logo from '../../assets/logo.webp'
 
 export const Dashboard = () => {
   return (
     <C.Dashboard>
-      <h1>GHS</h1>
+      <div>
+        <img src={Logo} alt="" />
+      </div>
       <nav>
         <a href="">
-          <FaGripHorizontal fontSize={20}/>
+          <FaGripHorizontal fontSize={20} />
           Home
         </a>
         <a href="">
-          <IoMdPerson fontSize={20}/>
+          <IoMdPerson fontSize={20} />
           Clientes
         </a>
         <a href="">
-          <FaBed fontSize={20}/>
+          <FaBed fontSize={20} />
           Acomodações
         </a>
         <a href="">
-          <FaRegCalendarAlt fontSize={20}/>
+          <FaRegCalendarAlt fontSize={20} />
           Reservas
         </a>
         <a href="">
-          <FaRegCreditCard fontSize={20}/>
+          <FaRegCreditCard fontSize={20} />
           Pagamentos
         </a>
         <a href="">
-          <FaUserLock fontSize={20}/>
+          <FaUserLock fontSize={20} />
           Administrador
         </a>
         <a href="">
-          <IoSettings fontSize={25}/>
+          <IoSettings fontSize={25} />
           Configurações
         </a>
       </nav>
       <button>
-        <IoMdExit/>
+        <IoMdExit />
         <span>Sair</span>
       </button>
     </C.Dashboard>
