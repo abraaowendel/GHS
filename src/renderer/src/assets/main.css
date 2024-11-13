@@ -1,11 +1,9 @@
 @import './base.css';
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 #root{
-  display: flex;
-  min-height: 100vh;
   overflow-x: hidden;
   user-select: none;
 }
@@ -13,8 +11,15 @@ main{
   display: flex;
   flex-direction: column;
 }
+::-webkit-scrollbar{
+  width: 8px;
+  background-color: #ccc;
+}
 .base{
+  position: relative;
+  left: 212px;
   padding: 30px 40px;
+  width: calc(100vw - 200px);
   min-height: calc(100vh - 40px);
   background-color: #F1F1F1;
 }

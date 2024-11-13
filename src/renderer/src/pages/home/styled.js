@@ -56,19 +56,26 @@ export const Button = styled.button`
   border-radius: 3px;
 `
 export const ReservationsBox = styled.div`
+  flex-wrap: wrap;
   padding: 40px 0;
+  gap: 20px;
   display: flex;
-  gap: 30px;
 `
 export const ReservationItem = styled.div`
-  flex: 1;
+  cursor: pointer;
+  flex: 0 0 auto;
+  min-width: 31.4%;
   display: flex;
   flex-direction: column;
   background-color: #fff;
   border-radius: 2px;
+  word-wrap: break-word;
   box-shadow:
     0 0 1px rgba(0, 0, 0, 0.125),
     0 1px 3px rgba(0, 0, 0, 0.2);
+  &:hover {
+    transform: scale(1.05);
+  }
 `
 export const ReservationItemTop = styled.div`
   display: flex;
@@ -78,13 +85,23 @@ export const ReservationItemTop = styled.div`
   border-top-left-radius: 2px;
   background-color: ${(props) => props.backgroundColor};
   color: ${(props) => (props.textColor ? '#000' : '#fff')};
+  svg{
+    margin-right: 5px;
+    margin-bottom: 0px;
+  }
 `
 export const ReservationItemCenter = styled.div`
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid #ccc;
   padding: 15px;
-  min-height: 115px;
+  min-height: 151px;
+  span{
+    margin: 5px 0;
+    svg{
+      margin-right: 5px;
+    }
+  }
 `
 export const ReservationItemBottom = styled.div`
   display: flex;
@@ -92,12 +109,13 @@ export const ReservationItemBottom = styled.div`
   justify-content: center;
   min-height: 30px;
   padding: 10px;
-  button{
-    padding: 8px 10px;
-    border: 1px solid transparent;
-    cursor: pointer;
-    &:hover{
-      background-color: #ccc;
-    }
-  }
+
+`
+export const ButtonReservation = styled.div`
+  border: 1px solid;
+  border-color: ${(props) => (props.color ? props.color : '#ff0000')};
+  color: ${(props) => (props.color ? props.color : '#ff0000')};
+  padding: 3px 8px;
+  font-size: 13px;
+  cursor: pointer; 
 `

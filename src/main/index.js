@@ -11,8 +11,8 @@ function createWindow() {
     show: false,
     titleBarStyle: 'hidden',
     titleBarOverlay: {
-      color: '#fff',
-      symbolColor: '#3497DA',
+      color: '#ffffff00',
+      symbolColor: '#000',
       height: 20
     },
     ...(process.platform === 'linux' ? { icon } : {}),

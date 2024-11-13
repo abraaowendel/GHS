@@ -64,81 +64,81 @@ function Home() {
         </C.Buttons>
       </C.Form>
       <C.ReservationsBox>
-        <C.ReservationItem className="boxI">
+        <C.ReservationItem>
           <C.ReservationItemTop backgroundColor="#F7AD04" textColor>
-            <PiHouseLineBold />
+            <PiHouseLineBold fontSize={30}/>
             <span>QUARTO 002</span>
           </C.ReservationItemTop>
           <C.ReservationItemCenter>
             <span>
-              <IoPricetag />
+              <IoPricetag color="#F7AD04" />
               Nº da reserva: {0}
             </span>
             <span>
-              <FaUserTag />
+              <FaUserTag color="#F7AD04" />
               TESTE
             </span>
             <span>
-              <HiUsers />
+              <HiUsers color="#F7AD04" />
               Hospedes: {0}
             </span>
             <span>
-              <FaRegCalendarAlt />
+              <FaRegCalendarAlt color="#F7AD04" />
               00/00/0000 - 11/11/1111
             </span>
           </C.ReservationItemCenter>
           <C.ReservationItemBottom>
-            <button>Check-in em atraso</button>
+            <C.ButtonReservation>Check-in em atraso</C.ButtonReservation>
           </C.ReservationItemBottom>
         </C.ReservationItem>
         <C.ReservationItem>
           <C.ReservationItemTop backgroundColor="#3498DB">
-            <PiHouseLineBold />
+            <PiHouseLineBold fontSize={30}/>
             <span>QUARTO 001</span>
           </C.ReservationItemTop>
           <C.ReservationItemCenter>
             <span>
-              <IoPricetag />
+              <IoPricetag color="#3498DB" />
               Nº da reserva: {0}
             </span>
             <span>
-              <FaUserTag />
+              <FaUserTag color="#3498DB" />
               TESTE
             </span>
             <span>
-              <HiUsers />
+              <HiUsers color="#3498DB" />
               Hospedes: {0}
             </span>
             <span>
-              <FaRegCalendarAlt />
+              <FaRegCalendarAlt color="#3498DB" />
               00/00/0000 - 11/11/1111
             </span>
           </C.ReservationItemCenter>
           <C.ReservationItemBottom>
-            <button>Check-out em atraso</button>
+            <C.ButtonReservation>Check-out em atraso</C.ButtonReservation>
           </C.ReservationItemBottom>
         </C.ReservationItem>
         <C.ReservationItem>
-          <C.ReservationItemTop backgroundColor="#198754">
-            <BsHouseAddFill />
+          <C.ReservationItemTop  backgroundColor="#198754">
+            <BsHouseAddFill fontSize={30}/>
             <span>QUARTO 003</span>
           </C.ReservationItemTop>
           <C.ReservationItemCenter>
             <span>
-              <BsFillHouseHeartFill />
+              <BsFillHouseHeartFill color="#198754" />
               Tipo: TESTE{}
             </span>
             <span>
-              <FaMoneyCheckAlt />
+              <FaMoneyCheckAlt color="#198754" />
               Valor diária: R$ 00,00{}
             </span>
             <span>
-              <HiUsers />
+              <HiUsers color="#198754" />
               Capacidade: {0}
             </span>
           </C.ReservationItemCenter>
           <C.ReservationItemBottom>
-            <button>Nova reserva</button>
+            <C.ButtonReservation color="#198754">Nova reserva</C.ButtonReservation>
           </C.ReservationItemBottom>
         </C.ReservationItem>
       </C.ReservationsBox>

@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 export const Dashboard = styled.div`
-  position: relative;
+  position: fixed;
   min-width: 200px;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #3497da;
   color: #000;
   display: flex;
@@ -42,9 +42,6 @@ export const Dashboard = styled.div`
   }
 
   button {
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
