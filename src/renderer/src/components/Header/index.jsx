@@ -1,9 +1,6 @@
-import * as C from "./styled";
+import * as C from './styled'
 
 export const Header = () => {
-  return (
-    <C.Header>
-     
-    </C.Header>
-  )
+  const url = window.location.pathname;
+  return <>{url !== '/login' && <C.Header></C.Header>}</>
 }
