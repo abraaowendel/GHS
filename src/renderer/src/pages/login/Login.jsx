@@ -1,26 +1,63 @@
 import { useState } from 'react'
 import * as C from './styled'
-import Logo from '../../assets/logo.webp'
 
 function Login() {
-  const [message, setMessage] = useState(false)
+  const [showMessage, setShowMessage] = useState(false)
+
+  const [login, setLogin] = useState({
+    user: '',
+    password: ''
+  })
+
+  const handleUserChange = (event) => {
+    setLogin({ ...login, user: event.target.value })
+  }
+
+  const handlePasswordChange = (event) => {
+    setLogin({ ...login, password: event.target.value })
+  }
+  const handleLogin = (event) => {
+    event.preventDefault()
+
+    if (login.user == 'admin' && login.password == 'admin') {
+      window.location.href = '/home'
+      return
+    }
+
+    setShowMessage(true)
+
+    setTimeout(() => {
+      setShowMessage(false)
+    }, 1000)
+  }
   return (
     <C.Container>
       <C.Box>
         <C.Logo>
-            <h1>GHS</h1>
+          <h1>GHS</h1>
           <p>Sistema de Gestão Hotelaria Simplicada </p>
         </C.Logo>
-        <C.Result>{message && <span>Usuário não cadastrado</span>}</C.Result>
-        <C.Form>
-          <input type="text" placeholder="Login" />
-          <input type="text" placeholder="Senha" />
-          <button>Acessar</button>
+        <C.Result>{showMessage && <span>Usuário ou Senha incorretos</span>}</C.Result>
+        <C.Form onSubmit={handleLogin}>
+          <input
+            type="text"
+            onChange={handleUserChange}
+            value={login.user}
+            placeholder="Login"
+            required
+          />
+          <input
+            type="password"
+            onChange={handlePasswordChange}
+            value={login.password}
+            placeholder="Senha"
+            required
+          />
+          <input type="submit" placeholder="Acessar" />
         </C.Form>
         <C.Copywriting>
-            <p>            Desenvolvido por 
-            </p>
-            <a href="www.abraaowendel.tech">abraaowendel.tech</a>
+          <p> Desenvolvido por</p>
+          <a href="www.abraaowendel.tech">abraaowendel.tech</a>
         </C.Copywriting>
       </C.Box>
     </C.Container>

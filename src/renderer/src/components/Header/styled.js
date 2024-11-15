@@ -9,5 +9,4 @@ export const Header = styled.header`
   justify-content: end;
   align-items: center;
   font-family: 'Poppins', sans-serif;
-  
 `

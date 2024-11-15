@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  background-color: #dbe3e9;
+  background-color: #CECECE;
   width: 100vw;
   min-height: 100vh;
   display: flex;
@@ -13,7 +13,7 @@ export const Box = styled.div`
   width: 100%;
   margin: auto;
   padding: 20px 40px;
-  background-color: #fff;
+  background-color: #DDD;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,6 +25,8 @@ export const Result = styled.div`
   width: 100%;
   text-align: center;
   padding: 25px 0 5px;
+  min-height: 60px;
+  height: 100%;
   span {
     display: block;
     color: #dc3545;
@@ -53,8 +55,7 @@ export const Form = styled.form`
     outline-color: #6c757d;
     border-color: transparent;
   }
-  input,
-  button {
+  input{
     width: 100%;
     margin: 10px 0;
     padding: 15px 10px;
@@ -62,7 +63,7 @@ export const Form = styled.form`
     border-radius: 5px;
     border-color: transparent;
   }
-  button {
+  input[type='submit']{
     cursor: pointer;
     background-color: #6c757d;
     color: #fff;

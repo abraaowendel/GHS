@@ -1,7 +1,9 @@
+import * as C from './styled'
+
 export const NotFound = () => {
   return (
-    <div>
+    <C.Container>
       <h1>404</h1>
-    </div>
+    </C.Container>
   )
 }

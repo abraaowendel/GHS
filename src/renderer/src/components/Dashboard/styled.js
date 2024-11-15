@@ -37,11 +37,14 @@ export const Dashboard = styled.div`
     }
 
     a:hover {
-      opacity: 0.8;
+      opacity: 0.5;
     }
   }
 
   button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
