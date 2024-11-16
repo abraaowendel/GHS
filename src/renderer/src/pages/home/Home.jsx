@@ -11,8 +11,15 @@ import { PiHouseLineBold } from 'react-icons/pi'
 import { IoPricetag } from 'react-icons/io5'
 import { HiUsers } from 'react-icons/hi2'
 import { BsFillHouseHeartFill, BsHouseAddFill } from 'react-icons/bs'
+import { useEffect } from 'react'
+import ChangeTitle from '../../utils/changeTitle'
 
 function Home() {
+  
+  useEffect(() => {
+    ChangeTitle('Home')
+  }, []);
+
   return (
     <C.Container className="base">
       <C.InfoBox>

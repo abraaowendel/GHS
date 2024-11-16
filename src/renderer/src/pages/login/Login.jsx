@@ -1,8 +1,13 @@
-import { useState } from 'react'
+import ChangeTitle from '../../utils/changeTitle'
 import * as C from './styled'
+import { useEffect, useState } from 'react'
 
 function Login() {
-  const [showMessage, setShowMessage] = useState(false)
+  const [showMessage, setShowMessage] = useState(false);
+
+  useEffect(() => {
+    ChangeTitle('Login')
+  }, []);
 
   const [login, setLogin] = useState({
     user: '',
@@ -20,7 +25,7 @@ function Login() {
     event.preventDefault()
 
     if (login.user == 'admin' && login.password == 'admin') {
-      window.location.href = '/home'
+      window.location.href = '/home';
       return
     }
 
@@ -30,6 +35,7 @@ function Login() {
       setShowMessage(false)
     }, 1000)
   }
+
   return (
     <C.Container>
       <C.Box>

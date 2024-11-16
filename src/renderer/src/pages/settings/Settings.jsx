@@ -1,8 +1,9 @@
 import * as C from './styled'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FaSave, FaIdCard } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
-import { IoLocationSharp } from "react-icons/io5";
+import { IoLocationSharp } from 'react-icons/io5'
+import ChangeTitle from '../../utils/changeTitle'
 
 function Settings() {
   const [dataHosting, setDataHosting] = useState({
@@ -29,14 +30,17 @@ function Settings() {
     check: ''
   })
 
+  useEffect(() => {
+    ChangeTitle('Configurações')
+  }, [])
+
   return (
     <C.Container className="base">
-       <C.Message>
-       </C.Message>
+      <C.Message></C.Message>
       <div className="formsTop">
         <C.Box>
           <C.BoxTop>
-            <FaIdCard fontSize={18}/>
+            <FaIdCard fontSize={18} />
             <span>Dados da Hospedagem</span>
           </C.BoxTop>
           <C.Form>
@@ -68,7 +72,7 @@ function Settings() {
         </C.Box>
         <C.Box>
           <C.BoxTop>
-            <IoLocationSharp fontSize={18}/>
+            <IoLocationSharp fontSize={18} />
             <span>Endereço da Hospedagem</span>
           </C.BoxTop>
           <C.Form>
