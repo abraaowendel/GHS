@@ -64,7 +64,7 @@ function Admin() {
                   >
                     {item.status ? 'Ativo' : 'Inativo'}
                   </td>
-                  <td onClick={null}>
+                  <td style={{textAlign: "center", cursor:"pointer"}}>
                     <FaEdit fontSize={20} />
                   </td>
                 </tr>
@@ -85,7 +85,7 @@ function Admin() {
                   >
                     {condition ? 'Ativo' : 'Inativo'}
                   </td>
-                  <td>
+                  <td style={{textAlign: "center", cursor:"pointer"}}>
                     <FaEdit fontSize={20} />
                   </td>
                 </tr>
