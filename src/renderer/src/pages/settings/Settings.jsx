@@ -1,6 +1,6 @@
 import * as C from './styled'
 import { useEffect, useState } from 'react'
-import { FaSave, FaIdCard } from 'react-icons/fa'
+import { FaSave, FaIdCard,FaEdit } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 import { IoLocationSharp } from 'react-icons/io5'
 import ChangeTitle from '../../utils/changeTitle'
@@ -37,6 +37,12 @@ function Settings() {
   return (
     <C.Container className="base">
       <C.Message></C.Message>
+      <C.Photo>
+        <button>
+          <label htmlFor="changeLogo"><FaEdit fontSize={14}/> Alterar Logo</label>
+          <input type="file" src="" alt="Alterar Logo" id='changeLogo'/>
+        </button>
+      </C.Photo>
       <div className="formsTop">
         <C.Box>
           <C.BoxTop>

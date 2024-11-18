@@ -9,7 +9,7 @@ export const Container = styled.div`
     display: flex;
     width: 100%;
     gap: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   .formsBottom {
     display: flex;
@@ -21,12 +21,38 @@ export const Container = styled.div`
   }
 `
 export const Message = styled.div`
-    background-color: ${(props) => props.backgroundColor};
-    border: 1px solid ${(props) => props.borderColor ? props.borderColor : "transparent"};
-    color: 1px solid ${(props) => props.textColor};
-    padding: 10px;
-    margin-bottom: 20px;
-    transition: 1s all ease-in;
+  background-color: ${(props) => props.backgroundColor};
+  border: 1px solid ${(props) => (props.borderColor ? props.borderColor : 'transparent')};
+  color: 1px solid ${(props) => props.textColor};
+  padding: 10px;
+  margin-bottom: 20px;
+  transition: 1s all ease-in;
+`
+export const Photo = styled.div`
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  label{
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px; 
+  }
+  button{
+    cursor: pointer;
+    padding: 5px; 
+    background-color: #3497DA;
+    border: 1px solid #ccc;
+    color: #fff;
+    border-radius: 3px;
+    &:hover{
+    }
+  }
+  input {
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
 `
 export const Box = styled.div`
   max-width: 50%;

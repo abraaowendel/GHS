@@ -2,13 +2,17 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: start;
   font-family: 'Poppins', sans-serif;
   .forms {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
+    font-size: 14px;
+    .register {
+      width: 100%;
+    }
   }
 `
 export const Box = styled.div`
@@ -41,6 +45,7 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   width: 100%;
+
   label {
     line-height: 35px;
   }
@@ -85,13 +90,11 @@ export const Show = styled.div`
   padding: 20px 20px 10px;
   display: flex;
   align-items: center;
-  p {
-    font-size: 18px;
-  }
+
   select {
-    padding: 5px 10px;
+    padding: 5px;
     font-size: 14px;
-    border: 1px solid #aaa;
+    border: 1px solid #aaaaaa;
     margin: 0 5px;
   }
 `
@@ -111,7 +114,7 @@ export const Table = styled.div`
     th {
       text-align: start;
       border: 1px solid #ccc;
-      padding: 10px 25px;
+      padding: 10px 15px;
     }
     tr {
       background-color: #eee;
@@ -144,4 +147,12 @@ export const BoxBottom = styled.div`
       opacity: 0.8;
     }
   }
+`
+export const Message = styled.div`
+  background-color: ${(props) => props.backgroundColor};
+  border: 1px solid ${(props) => (props.borderColor ? props.borderColor : 'transparent')};
+  color: 1px solid ${(props) => props.textColor};
+  padding: 10px;
+  margin-bottom: 20px;
+  transition: 1s all ease-in;
 `

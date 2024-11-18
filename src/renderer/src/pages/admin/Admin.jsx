@@ -20,14 +20,15 @@ function Admin() {
 
   return (
     <C.Container className="base">
+      <C.Message></C.Message>
       <div className="forms">
-      <C.Box>
+        <C.Box className='register'>
           <C.BoxTop>
             <FaIdCard fontSize={18} />
             <span>Funcionários Cadastrados</span>
           </C.BoxTop>
           <C.Show>
-            <p>Exibir </p>
+            <p>Exibir</p>
             <select name="" id="">
               <option value="10">10</option>
               <option value="25">25</option>
@@ -85,7 +86,7 @@ function Admin() {
                   >
                     {condition ? 'Ativo' : 'Inativo'}
                   </td>
-                  <td style={{textAlign: "center", cursor:"pointer"}}>
+                  <td style={{ textAlign: 'center', cursor: 'pointer' }}>
                     <FaEdit fontSize={20} />
                   </td>
                 </tr>
@@ -106,7 +107,7 @@ function Admin() {
         <C.Box>
           <C.BoxTop>
             <FaIdCard fontSize={18} />
-            <span>Cadastro do Funcionario</span>
+            <span>Cadastro do Funcionário</span>
           </C.BoxTop>
           <C.Form>
             <label htmlFor="fullName">Nome Completo</label>
@@ -133,7 +134,6 @@ function Admin() {
             </div>
           </C.Form>
         </C.Box>
-       
       </div>
     </C.Container>
   )
