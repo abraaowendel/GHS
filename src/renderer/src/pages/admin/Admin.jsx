@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react'
 import * as C from './styled'
 import { FaSave, FaIdCard, FaEdit } from 'react-icons/fa'
 import ChangeTitle from '../../utils/changeTitle'
+import { ModalAdmin } from '../../components/Modals/ModalAdmin/index'
 
 function Admin() {
   const condition = true
+  const [showModal, setShowModal] = useState(false)
 
   const [dataUser, setDataUser] = useState({
     fullName: '',
@@ -18,11 +20,18 @@ function Admin() {
     ChangeTitle('Painel do Administrador')
   }, [])
 
+  const handleShowModal = () => {
+    setShowModal(true)
+  }  
+  const handleCloseModal = () => {
+    setShowModal(false)
+  }
+
   return (
     <C.Container className="base">
       <C.Message></C.Message>
       <div className="forms">
-        <C.Box className='register'>
+        <C.Box className="register">
           <C.BoxTop>
             <FaIdCard fontSize={18} />
             <span>Funcionários Cadastrados</span>
@@ -87,7 +96,7 @@ function Admin() {
                     {condition ? 'Ativo' : 'Inativo'}
                   </td>
                   <td style={{ textAlign: 'center', cursor: 'pointer' }}>
-                    <FaEdit fontSize={20} />
+                    <FaEdit fontSize={20} onClick={handleShowModal} />
                   </td>
                 </tr>
               </tbody>
@@ -134,6 +143,7 @@ function Admin() {
             </div>
           </C.Form>
         </C.Box>
+        {showModal && <ModalAdmin onClose={handleCloseModal}/>}
       </div>
     </C.Container>
   )

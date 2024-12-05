@@ -5,6 +5,7 @@ import { NotFound } from "../components/NotFound";
 import Login from "../pages/login/Login";
 import Settings from "../pages/settings/Settings";
 import Admin from "../pages/admin/Admin";
+import Customers from "../pages/customers/Customers";
 
 const MainRoutes = () => {
   return (
@@ -14,6 +15,7 @@ const MainRoutes = () => {
       <Route path="/home" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/settings" element={<Settings />} />
+      <Route path="/customers" element={<Customers />} />
       <Route path="/admin" element={<Admin />} />
     </Routes>
   );

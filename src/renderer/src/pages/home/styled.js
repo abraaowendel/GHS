@@ -64,8 +64,8 @@ export const ReservationsBox = styled.div`
 export const ReservationItem = styled.div`
   cursor: pointer;
   flex: 0 0 auto;
-  min-width: 31.4%;
   display: flex;
+  min-width: 32.5%;
   flex-direction: column;
   background-color: #fff;
   border-radius: 2px;
