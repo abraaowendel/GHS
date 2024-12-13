@@ -59,7 +59,9 @@ function Login() {
             placeholder="Senha"
             required
           />
-          <input type="submit" placeholder="Acessar" />
+          <button onSubmit={handleLogin}>
+            Entrar
+          </button>
         </C.Form>
         <C.Copywriting>
           <p> Desenvolvido por</p>

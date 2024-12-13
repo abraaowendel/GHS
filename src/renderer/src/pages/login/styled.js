@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  background-color: #CECECE;
+  background-color: #3497DA;
   width: 100vw;
   min-height: 100vh;
   display: flex;
@@ -55,7 +55,7 @@ export const Form = styled.form`
     outline-color: #6c757d;
     border-color: transparent;
   }
-  input{
+  input,button{
     width: 100%;
     margin: 10px 0;
     padding: 15px 10px;
@@ -63,9 +63,9 @@ export const Form = styled.form`
     border-radius: 5px;
     border-color: transparent;
   }
-  input[type='submit']{
+  button{
     cursor: pointer;
-    background-color: #6c757d;
+    background-color: #21b221;
     color: #fff;
     &:hover {
       opacity: 0.9;

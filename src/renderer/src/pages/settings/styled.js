@@ -39,7 +39,7 @@ export const Photo = styled.div`
   }
   button{
     cursor: pointer;
-    padding: 5px; 
+    padding: 10px; 
     background-color: #3497DA;
     border: 1px solid #ccc;
     color: #fff;

@@ -3,10 +3,14 @@ import * as C from './styled'
 import { FaSave, FaIdCard, FaEdit } from 'react-icons/fa'
 import ChangeTitle from '../../utils/changeTitle'
 import { ModalAdmin } from '../../components/Modals/ModalAdmin/index'
+import { IoMdPersonAdd } from "react-icons/io";
+import { ModalNewCustomer } from '../../components/Modals/ModalNewCustomer'
+import { ModalCustomer } from '../../components/Modals/ModalCustomer'
 
 function Customers() {
   const condition = true
   const [showModal, setShowModal] = useState(false)
+  const [showModalNewCustomer, setShowModalNewCustomer] = useState(false)
 
   const [dataUser, setDataUser] = useState({
     fullName: '',
@@ -22,15 +26,29 @@ function Customers() {
 
   const handleShowModal = () => {
     setShowModal(true)
-  }  
+  }
 
   const handleCloseModal = () => {
     setShowModal(false)
   }
 
+  const handleShowModalNewCustomer = () => {
+    setShowModalNewCustomer(true)
+  }
+
+  const handleCloseModalNewCustomer = () => {
+    setShowModalNewCustomer(false)
+  }
+
   return (
     <C.Container className="base">
       <C.Message></C.Message>
+      <C.ButtonRegister>
+        <button onClick={handleShowModalNewCustomer}>
+          <IoMdPersonAdd size={18} style={{margin: " 0 5px"}}/>
+          Cadastrar Cliente
+        </button>
+      </C.ButtonRegister>
       <div className="forms">
         <C.Box className="register">
           <C.BoxTop>
@@ -84,8 +102,10 @@ function Customers() {
           </C.BoxBottom>
         </C.Box>
       </div>
+      {showModalNewCustomer && <ModalNewCustomer onClose={handleCloseModalNewCustomer}/>}
+      {showModal && <ModalCustomer onClose={handleCloseModal}/>}
     </C.Container>
   )
 }
 
-export default Customers;
+export default Customers

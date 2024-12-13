@@ -157,3 +157,23 @@ export const Message = styled.div`
   margin-bottom: 20px;
   transition: 1s all ease-in;
 `
+export const ButtonRegister = styled.div`
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  button{
+    font-size: 16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px; 
+    background-color: #3497DA;
+    border: 1px solid #ccc;
+    color: #fff;
+    border-radius: 3px;
+    &:hover{
+    }
+  }
+  
+`
